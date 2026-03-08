@@ -1,0 +1,160 @@
+/* Footer Section Styles */
+.footer {
+  width: 100%;
+  background-color: var(--color-primary-blue);
+  color: white;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.footer-container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: var(--spacing-2xl);
+}
+
+/* Column 1: Brand */
+.footer-brand h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 0 var(--spacing-md) 0;
+  color: white;
+  font-family: var(--font-family-base);
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-family-base);
+}
+
+/* Column 2: Quick Links */
+.footer-links h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 0 var(--spacing-lg) 0;
+  color: white;
+  font-family: var(--font-family-base);
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  font-family: var(--font-family-base);
+}
+
+.footer-links ul li a:hover {
+  color: var(--color-accent-yellow);
+}
+
+/* Column 3: Contact Info */
+.footer-contact h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 0 var(--spacing-lg) 0;
+  color: white;
+  font-family: var(--font-family-base);
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-family-base);
+}
+
+.footer-contact-item svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Divider */
+.footer-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Copyright Bar */
+.footer-copyright {
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-family-base);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .footer-brand h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.85rem;
+  }
+
+  .footer-links h3,
+  .footer-contact h3 {
+    font-size: 1rem;
+  }
+
+  .footer-contact-item {
+    font-size: 0.9rem;
+  }
+
+  .footer-divider {
+    padding-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .footer-copyright {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .footer-brand h2 {
+    font-size: 1.25rem;
+  }
+
+  .footer-links ul,
+  .footer-contact-item {
+    gap: var(--spacing-sm);
+  }
+}
