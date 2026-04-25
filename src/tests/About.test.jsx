@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import About from "../components/About";
 
 describe("About Component", () => {
@@ -30,10 +30,44 @@ describe("About Component", () => {
     ).toBeInTheDocument();
   });
 
-  it("should render the placeholder image with correct alt text", () => {
+  it("should render all carousel slides", () => {
     render(<About />);
-    const img = screen.getByAltText(/EME English learning environment/i);
-    expect(img).toBeInTheDocument();
+    const slides = screen.getAllByAltText(/Carousel slide/i);
+    expect(slides.length).toBe(3);
+  });
+
+  it("should render carousel navigation buttons", () => {
+    render(<About />);
+    expect(screen.getByLabelText("Previous slide")).toBeInTheDocument();
+    expect(screen.getByLabelText("Next slide")).toBeInTheDocument();
+  });
+
+  it("should advance to next slide when next button is clicked", async () => {
+    render(<About />);
+    const nextButton = screen.getByLabelText("Next slide");
+    const carouselTrack = screen
+      .getByRole("region")
+      .querySelector(".carousel-track");
+
+    fireEvent.click(nextButton);
+
+    await waitFor(() => {
+      expect(carouselTrack).toHaveStyle("transform: translateX(-100%)");
+    });
+  });
+
+  it("should go to previous slide when prev button is clicked", async () => {
+    render(<About />);
+    const prevButton = screen.getByLabelText("Previous slide");
+    const carouselTrack = screen
+      .getByRole("region")
+      .querySelector(".carousel-track");
+
+    fireEvent.click(prevButton);
+
+    await waitFor(() => {
+      expect(carouselTrack).toHaveStyle("transform: translateX(-200%)");
+    });
   });
 
   it("should have the correct section ID", () => {

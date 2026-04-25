@@ -1,7 +1,7 @@
 /* Hero Section Styles */
 .hero {
   width: 100%;
-  min-height: 70vh;
+  min-height: 78vh;
   background-image:
     linear-gradient(rgba(26, 58, 82, 0.6), rgba(26, 58, 82, 0.6)),
     url("https://images.unsplash.com/photo-1427504494785-cdaac8c6b6b8?w=1200&h=500&fit=crop");
@@ -33,6 +33,7 @@
   color: var(--color-background-white);
   font-family: var(--font-family-base);
   line-height: 1.1;
+  letter-spacing: 0.5px;
 }
 
 .hero-content p {
@@ -49,7 +50,7 @@
   background-color: var(--color-accent-yellow);
   color: var(--color-primary-blue);
   border: none;
-  padding: 15px 30px;
+  padding: 18px 40px;
   font-size: 1.1rem;
   font-weight: bold;
   border-radius: var(--border-radius-md);
@@ -58,15 +59,17 @@
     transform 0.3s ease,
     box-shadow 0.3s ease;
   font-family: var(--font-family-base);
+  letter-spacing: 0.3px;
+  box-shadow: 0 8px 20px rgba(244, 196, 48, 0.3);
 }
 
 .cta-button:hover {
-  transform: scale(1.05);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(244, 196, 48, 0.4);
 }
 
 .cta-button:active {
-  transform: scale(0.98);
+  transform: translateY(-1px);
 }
 
 /* Mobile Responsive */
