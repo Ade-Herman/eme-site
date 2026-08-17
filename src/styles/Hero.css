@@ -1,10 +1,10 @@
 /* Hero Section Styles */
 .hero {
   width: 100%;
-  min-height: 78vh;
+  min-height: 82vh;
   background-image:
-    linear-gradient(rgba(26, 58, 82, 0.6), rgba(26, 58, 82, 0.6)),
-    url("https://images.unsplash.com/photo-1427504494785-cdaac8c6b6b8?w=1200&h=500&fit=crop");
+    linear-gradient(rgba(26, 58, 82, 0.65), rgba(26, 58, 82, 0.65)),
+    url("https://images.unsplash.com/photo-1427504494785-cdaac8c6b6b8?w=1920&q=80&fit=crop");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -13,12 +13,13 @@
   justify-content: center;
   text-align: center;
   color: var(--color-background-white);
-  padding: var(--spacing-2xl) var(--spacing-lg);
+  padding: clamp(4rem, 8vh, 8rem) var(--spacing-lg);
 }
 
 .hero-content {
-  max-width: 700px;
-  padding: var(--spacing-2xl);
+  max-width: 950px;
+  width: 100%;
+  padding: clamp(1rem, 3vw, 2.5rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,22 +28,22 @@
 }
 
 .hero-content h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 5.2vw, 4.5rem);
   font-weight: bold;
   margin-bottom: 0;
   color: var(--color-background-white);
   font-family: var(--font-family-base);
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: 0.5px;
 }
 
 .hero-content p {
-  font-size: 1.25rem;
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
   margin-bottom: 0;
   color: var(--color-background-white);
   font-family: var(--font-family-base);
   line-height: 1.6;
-  max-width: 700px;
+  max-width: 850px;
   text-align: center;
 }
 

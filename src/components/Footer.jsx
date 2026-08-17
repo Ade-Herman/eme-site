@@ -3,7 +3,7 @@
  * Footer section with brand, links, and contact information
  */
 import { Link } from "react-scroll";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { Phone, Mail, MapPin } from "lucide-react";
 import "../styles/Footer.css";
 
 function Footer() {
@@ -75,15 +75,15 @@ function Footer() {
           <div className="footer-contact">
             <h3>Contact Info</h3>
             <div className="footer-contact-item">
-              <FaPhone />
+              <Phone />
               <span>+62 123 4567 890</span>
             </div>
             <div className="footer-contact-item">
-              <FaEnvelope />
+              <Mail />
               <span>hello@eme-course.com</span>
             </div>
             <div className="footer-contact-item">
-              <FaMapMarkerAlt />
+              <MapPin />
               <span>Depok, Yogyakarta, Indonesia</span>
             </div>
           </div>

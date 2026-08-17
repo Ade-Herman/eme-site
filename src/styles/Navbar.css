@@ -9,9 +9,10 @@
 }
 
 .navbar-container {
-  max-width: 90%;
+  max-width: var(--container-max-width, 1440px);
+  width: var(--container-width-responsive, 92%);
   margin: 0 auto;
-  padding: var(--spacing-md) var(--spacing-lg);
+  padding: var(--spacing-md) 0;
   display: flex;
   justify-content: space-between;
   align-items: center;

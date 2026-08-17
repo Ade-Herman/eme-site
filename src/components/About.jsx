@@ -3,7 +3,7 @@
  * Brief course overview and information section with image carousel
  */
 import { useState, useEffect } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import orangeCat from "../assets/orange-cat.jpg";
 import greyCat from "../assets/grey-cat.jpg";
 import blackWhiteCat from "../assets/blackWhite-cat.jpg";
@@ -75,7 +75,7 @@ function About() {
               onClick={prevSlide}
               aria-label="Previous slide"
             >
-              <FaChevronLeft />
+              <ChevronLeft />
             </button>
 
             {/* Right Arrow */}
@@ -84,7 +84,7 @@ function About() {
               onClick={nextSlide}
               aria-label="Next slide"
             >
-              <FaChevronRight />
+              <ChevronRight />
             </button>
           </div>
         </div>

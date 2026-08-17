@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { Menu, X } from "lucide-react";
 import { Link } from "react-scroll";
 import emeLogoBold from "../assets/eme-logo.png";
 import emeScript from "../assets/eme-script.png";
@@ -36,9 +36,9 @@ function Navbar() {
         {/* Hamburger Icon */}
         <div className="navbar-toggle" onClick={toggleMenu}>
           {isOpen ? (
-            <FaTimes className="navbar-icon" />
+            <X className="navbar-icon" />
           ) : (
-            <FaBars className="navbar-icon" />
+            <Menu className="navbar-icon" />
           )}
         </div>
 
